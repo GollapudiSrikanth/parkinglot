@@ -1,0 +1,32 @@
+<div>
+  Lot Address :
+  <input type="text" [(ngModel)]="lot"> Vehicle Number :
+  <input type="text" [(ngModel)]="vehicle_number"> Parking Duration :
+  <input type="text" [(ngModel)]="duration"> Amount :
+  <input type="text" [(ngModel)]="amount">
+  <button (click)="GetParkingDetails()">Park Now</button>
+</div>
+<hr>
+<br>
+<h3 *ngIf="SameLot" style="color:red">Vehicle Already Parked</h3>
+<div *ngIf="check">
+  <h4>Parked vehicle Report</h4>
+  <table border="1">
+    <tr>
+      <th>ID</th>
+      <th>Lot</th>
+      <th>Vehicle Number</th>
+      <th>Duration</th>
+      <th>Amount</th>
+    </tr>
+    <tr *ngFor="let parking of ParkingDetails; index as i">
+      <td>{{parking.id}}</td>
+      <td>{{parking.lot}}</td>
+      <td>{{parking.vehicle_number}}</td>
+      <td>{{parking.parking_duration}}</td>
+      <td>{{parking.parking_amount}}</td>
+    </tr>
+
+  </table>
+
+</div>
