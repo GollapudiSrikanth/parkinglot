@@ -25,9 +25,9 @@ export class AppComponent implements OnInit {
   }
   ngOnInit() {
     this.ParkingForm = this.formBuilder.group({
-      lot: new FormControl('', Validators.required, Validators.pattern["[0-9]+"]),
-      vehicle_number: new FormControl('', Validators.required, Validators.pattern["[0-9]+"]),
-      duration: new FormControl('', Validators.required, Validators.pattern["[0-9]+"]),
+      lot: new FormControl('', Validators.required),
+      vehicle_number: new FormControl('', Validators.required),
+      duration: new FormControl('', Validators.required),
       amount: new FormControl('')
     })
 

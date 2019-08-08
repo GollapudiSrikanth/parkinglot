@@ -4,20 +4,20 @@
     <input type="text" formControlName="lot" required>
     <span *ngIf="submit && ParkingForm.controls['lot'].hasError('required')" style="color:red"> LotAddress is Required
     </span>
-    <span *ngIf="submit && ParkingForm.invalid" style="color:red"> Only Number is Allowed
-    </span>
+    <!-- <span *ngIf="submit && ParkingForm.invalid" style="color:red"> Only Number is Allowed
+    </span> -->
     Vehicle Number :
     <input type="text" formControlName="vehicle_number" required>
     <span *ngIf="submit && ParkingForm.controls['vehicle_number'].hasError('required')" style="color:red"> Vehicle Number is Required
     </span>
-    <span *ngIf="submit && ParkingForm.invalid" style="color:red"> Only Number is Allowed
-    </span>
+    <!-- <span *ngIf="submit && ParkingForm.invalid" style="color:red"> Only Number is Allowed
+    </span> -->
     Parking Duration :
     <input type="text" formControlName="duration" required>
     <span *ngIf="submit && ParkingForm.controls['duration'].hasError('required')" style="color:red"> Duration is Required
     </span>
-    <span *ngIf="submit && ParkingForm.invalid" style="color:red"> Only Number is Allowed
-    </span>
+    <!-- <span *ngIf="submit && ParkingForm.invalid" style="color:red"> Only Number is Allowed
+    </span> -->
     Amount :
     <input type="text" formControlName="amount" value={{ParkingForm.value.amount}} required>
     <button>Park Now</button>
